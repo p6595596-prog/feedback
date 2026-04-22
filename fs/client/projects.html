@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="logo">Ather</div>
+
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="settings.html">Settings</a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <div class="topbar">
+    <h2>PROJECTS</h2>
+  </div>
+
+  <div id="projectContainer"></div>
+
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+
+    <h3>Share your thoughts 💬</h3>
+    <p class="subtext">Tell us your ideas about this project</p>
+
+    <textarea id="feedbackInput" placeholder="Add your thoughts..."></textarea>
+
+    <div class="stars" id="stars">
+      <span onclick="rate(1)">★</span>
+      <span onclick="rate(2)">★</span>
+      <span onclick="rate(3)">★</span>
+      <span onclick="rate(4)">★</span>
+      <span onclick="rate(5)">★</span>
+    </div>
+
+    <button onclick="submitFeedback()">Submit</button>
+    <button onclick="closePopup()">Cancel</button>
+
+  </div>
+</div>
+
+<script>
+let projects = [
+  {name:"Neural Synthesizer v4", admin:"Admin A"},
+  {name:"Quantum Stream Filter", admin:"Admin B"},
+  {name:"Ghost Protocol Shield", admin:"Admin C"},
+  {name:"AI Prediction Engine", admin:"Admin D"}
+];
+
+let currentProject = "";
+let rating = 0;
+
+function loadProjects(){
+  let container = document.getElementById("projectContainer");
+  container.innerHTML = "";
+
+  projects.forEach(p=>{
+    let card = document.createElement("div");
+    card.className = "client-card";
+
+    card.innerHTML = `
+      <h3>${p.name}</h3>
+      <p>Admin: ${p.admin}</p>
+      <button onclick="openPopup('${p.name}')">Add Feedback</button>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+function openPopup(project){
+  currentProject = project;
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup(){
+  document.getElementById("popup").style.display = "none";
+}
+
+function rate(val){
+  rating = val;
+  let stars = document.querySelectorAll("#stars span");
+
+  stars.forEach((s,i)=>{
+    if(i < val) s.classList.add("active");
+    else s.classList.remove("active");
+  });
+}
+
+function submitFeedback(){
+  let text = document.getElementById("feedbackInput").value;
+
+  if(text === ""){
+    alert("Enter feedback");
+    return;
+  }
+
+  alert("Feedback submitted!");
+
+  document.getElementById("feedbackInput").value = "";
+  rating = 0;
+  closePopup();
+}
+
+loadProjects();
+</script>
+
+</body>
+</html>

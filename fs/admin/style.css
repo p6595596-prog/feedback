@@ -1,0 +1,222 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* BODY */
+body {
+  margin: 0;
+  background: #071428;
+  color: #fff;
+}
+
+/* SIDEBAR (SLIM + FIXED) */
+.sidebar {
+  width: 160px;   /* 👈 reduced */
+  height: 100vh;
+  background: #081a33;
+  padding: 15px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* LOGO */
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4da3ff;
+  margin-bottom: 20px;
+}
+
+/* MENU */
+.menu a {
+  display: block;
+  color: #8aa4c5;
+  text-decoration: none;
+  margin: 8px 0;
+  padding: 6px;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-size: 12px;
+}
+
+.menu a:hover,
+.menu a.active {
+  background: #0d2a4d;
+  color: #fff;
+}
+
+/* MAIN CONTENT */
+.main {
+  margin-left: 160px;   /* 👈 match sidebar */
+  height: 100vh;
+  overflow-y: auto;
+  padding: 15px 20px;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  background: #071428;
+  z-index: 10;
+  padding-bottom: 8px;
+}
+
+.topbar h2 {
+  font-size: 13px;
+  color: #9bb7d9;
+}
+
+.search {
+  background: #0d2a4d;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  font-size: 11px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  margin-top: 12px;
+  gap: 12px;
+}
+
+.card {
+  background: linear-gradient(145deg, #0c254a, #081a33);
+  padding: 12px;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+/* WELCOME */
+.welcome h1 {
+  font-size: 18px;
+}
+
+.welcome span {
+  color: #4da3ff;
+}
+
+.welcome p {
+  margin-top: 5px;
+  color: #9bb7d9;
+  font-size: 11px;
+}
+
+/* BADGES */
+.badges {
+  margin-top: 8px;
+}
+
+.badge {
+  display: inline-block;
+  background: #0d2a4d;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 9px;
+  margin-right: 6px;
+}
+
+/* CIRCLE */
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 6px solid #0d2a4d;
+  border-top: 6px solid #4da3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin: auto;
+}
+
+.circle-text {
+  text-align: center;
+  margin-top: 6px;
+  color: #9bb7d9;
+  font-size: 10px;
+}
+
+/* PROJECT SECTION */
+.projects {
+  margin-top: 12px;
+}
+
+.projects h3 {
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+/* TABLE */
+.table {
+  background: #081a33;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* ROW */
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #0d2a4d;
+  font-size: 11px;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+/* PROGRESS */
+.progress {
+  width: 70px;
+  height: 4px;
+  background: #0d2a4d;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: #4da3ff;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 8px;
+  background: #4da3ff;
+  color: #000;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.btn:hover {
+  background: #6bb8ff;
+}
+
+input {
+  background: #0d2a4d;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+  font-size: 11px;
+}

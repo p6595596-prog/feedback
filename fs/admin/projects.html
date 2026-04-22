@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- SAME SIDEBAR -->
+<div class="sidebar">
+  <div class="logo">Ather</div>
+
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="client.html">Client Profile</a>
+    <a href="settings.html">Settings</a>
+
+  </div>
+</div>
+
+<div class="main">
+
+  <h2>Projects</h2>
+
+  <!-- ADD PROJECT -->
+  <input id="projectInput" placeholder="Enter project name" class="search">
+  <button class="btn" onclick="addProject()">Add Project</button>
+
+  <!-- LIST -->
+  <div class="table" id="projectList"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

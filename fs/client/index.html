@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard UI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="sidebar">
+  <div class="logo">Ather</div>
+
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="settings.html">Settings</a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <h2>ATHERIAL TECH</h2>
+    <input class="search" placeholder="Search system logs...">
+  </div>
+
+  <!-- CARDS -->
+  <div class="cards">
+
+    <!-- LEFT -->
+    <div class="card welcome">
+      <h1>Welcome back, <span>Architect.</span></h1>
+      <p>System status is currently nominal. All nodes are synchronizing at 98.4% efficiency.</p>
+
+      <div class="badges">
+        <span class="badge">Cloud Latency: 12ms</span>
+        <span class="badge">Uptime: 99.99%</span>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="card">
+      <div class="circle" id="progressCircle">90%</div>
+      <p class="circle-text">
+        Core stability operating within optimal thresholds.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="projects">
+    <h3>Active Projects</h3>
+
+    <div class="table">
+
+      <div class="row">
+        <div>Neural Synthesizer v4</div>
+        <div class="progress"><span style="width:42%"></span></div>
+        <div>Optimal</div>
+      </div>
+
+      <div class="row">
+        <div>Quantum Stream Filter</div>
+        <div class="progress"><span style="width:89%"></span></div>
+        <div>Scaling</div>
+      </div>
+
+      <div class="row">
+        <div>Ghost Protocol Shield</div>
+        <div class="progress"><span style="width:12%"></span></div>
+        <div>Idle</div>
+      </div>
+
+    </div>
+
+    <button class="btn">Deploy New Node</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
